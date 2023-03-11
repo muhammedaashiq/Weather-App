@@ -79,11 +79,11 @@ h2.city {
     position: relative;
 }
 
-.weather.loading:after {
+/* .weather.loading:after {
     visibility: visible;
     content: "Loading...";
     color: white;
     position: absolute;
     top: 0;
     left: 20px;
-}
+} */
