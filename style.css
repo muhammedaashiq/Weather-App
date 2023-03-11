@@ -6,7 +6,7 @@ body {
     margin: 0;
     font-family: 'Open Sans', sans-serif;
     background: #222;
-    background-image: url('https://source.unsplash.com/1600x900/?landscape');
+    /* background-image: url('https://source.unsplash.com/1600x900/?landscape'); */
     font-size: 120%;
 }
 
@@ -79,11 +79,11 @@ h2.city {
     position: relative;
 }
 
-.weather.loading:after {
+/* .weather.loading:after {
     visibility: visible;
     content: "Loading...";
     color: white;
     position: absolute;
     top: 0;
     left: 20px;
-}
+} */
