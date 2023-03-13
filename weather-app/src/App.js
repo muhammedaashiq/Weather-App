@@ -1,4 +1,4 @@
-import React,{useEffect,useState} from 'react';
+import React,{useState} from 'react';
 import './App.css';
 
 function App() {
@@ -14,13 +14,9 @@ function App() {
 
   const apiKey = "392d1b58a2e2e92fbf0ee16a30ef7a23"
   
-  useEffect(() => {
-    fetchWeather(city)
-  })
-  
   function fetchWeather(city){
-      fetch(
-          `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`
+    fetch(
+      `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`
       ).then((response) => response.json())
           .then((data) => displayWeather(data))
   }
@@ -46,6 +42,8 @@ function App() {
     setCity(check)
   }
   
+  fetchWeather(city)
+
   return (
     <div className="card">
         <form onSubmit={handleSubmit}>
