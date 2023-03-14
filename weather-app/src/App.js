@@ -14,6 +14,13 @@ function App() {
 
   const apiKey = "392d1b58a2e2e92fbf0ee16a30ef7a23"
   
+  const handleSubmit=(e)=>{
+    e.preventDefault()
+    setCity(check)
+  }
+  
+  fetchWeather(city)
+  
   function fetchWeather(city){
     fetch(
       `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`
@@ -37,12 +44,6 @@ function App() {
     setWind(winddata)
   }
 
-  const handleSubmit=(e)=>{
-    e.preventDefault()
-    setCity(check)
-  }
-  
-  fetchWeather(city)
 
   return (
     <div className="card">
